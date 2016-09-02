@@ -1,23 +1,39 @@
-    int find_entry(int[] array, int len, int* entry) {
-    int counter = 0;
-    int last;
-    if (len == 0 || len == 1) {
-    *entry = 0;
-    return 0;
-    }
-    last = array[--len];
-    while (len) {
-    var current = array + [--len];
-    if (last != current) {
-    if (counter & 1) {
-    counter = 0;
-    continue;
-    } else {
-    *entry = current;
-    return len;
-    }
-    } else {
-    counter++;
-    }
-    }
-    }
+#include<stdio.h>
+#include<conio.h>
+#include<math.h>
+void main()
+{
+long int a1[20],i,j,n1,temp,c;
+long int sum1=0;
+clrscr();
+scanf("%ld",&n1);
+for(i=0;i<n1;i++)
+{
+scanf("%d",&a1[i]);
+}
+for(i=0;i<n1;i++)
+{
+for(j=i+1;j<n1;j++)
+{
+if(a1[j]>a1[i])
+{
+temp=a1[i];
+a1[i]=a1[j];
+a1[j]=temp;
+}
+}
+}
+for(i=0;i<n1-1;i++)
+{
+temp=a1[i+1];
+c=0;
+while(temp!=0)
+{
+temp=temp/10;
+c++;
+}
+sum1=(sum1*pow(10,c))+a1[i+1];
+}
+printf("\n%ld",sum1);
+getch();
+}
