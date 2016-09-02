@@ -19,7 +19,7 @@ int IsRectangle(point a, point b, point c, point d)
         IsOrthogonal(c, d, a);
 }
 
-If the order is not known in advance, we need a slightly more complicated check:
+//If the order is not known in advance, we need a slightly more complicated check:
 
 int IsRectangleAnyOrder(point a, point b, point c, point d)
 {
