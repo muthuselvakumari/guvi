@@ -22,3 +22,4 @@ scnd=a[i];
 }
 printf("\n the second smallest is:%d",scnd);
 }
+}
