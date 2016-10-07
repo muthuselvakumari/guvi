@@ -16,7 +16,7 @@ j=i;
 scnd=a[size-j-i];
 for(i=1;i<size;i++)
 {
-if(scnd>a[i] && j!=i)
+if((scnd>a[i]) && (j!=i))
 {
 scnd=a[i];
 }
